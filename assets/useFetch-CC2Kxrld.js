@@ -1,0 +1,1 @@
+import{r as t}from"./index-D6cHnc1d.js";function i(s){const[c,r]=t.useState([]),[n,u]=t.useState(!0),[a,f]=t.useState(null);return t.useEffect(()=>{(async()=>{try{const e=await(await fetch(s)).json();e.products?r(e.products):r(e)}catch(o){f("Failed to fetch products!"),console.error(o)}finally{u(!1)}})()},[s]),{products:c,loading:n,error:a}}export{i as u};
