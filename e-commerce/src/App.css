@@ -32,3 +32,13 @@
     color: var(--bw-color);
     padding-top: 77px;
 }
+
+/* ------------------------------------------- */
+
+.loading, .error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}

@@ -44,7 +44,7 @@
 
 /* ------------------------------------------- */
 
-.product-item .add-button {
+.product-item .add-btn {
     background-color: var(--db2-color);
     color: white;
     cursor: pointer;
@@ -52,8 +52,9 @@
     padding: 1px 10px;
     transition: all 0.5s ease;
 }
-.add-button:hover {
+.add-btn:hover {
     background-color: var(--db1-color);
     transform: translateY(-5px);
 }
 
+/* ------------------------------------------- */

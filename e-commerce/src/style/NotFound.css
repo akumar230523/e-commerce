@@ -14,7 +14,7 @@
     font-style: italic;
 } 
 
-.not-found .back-button {
+.not-found .back-btn {
     background-color: var(--db2-color);
     border-radius: 10px;
     color: white;
@@ -23,7 +23,8 @@
     text-decoration: none;
     transition: background-color 0.5s ease;
 }
-.not-found .back-button:hover {
+.not-found .back-btn:hover {
     background-color: var(--db1-color);
 }
 
+/* ------------------------------------------- */

@@ -22,6 +22,7 @@ const ProductList = () => {
         return matchesTitle && matchesCategory;
     });
 
+    // Loading State
     if (loading) return (
         <div className="loading"> 
             <i className="fa-solid fa-spinner fa-spin-pulse"></i> 
@@ -29,6 +30,7 @@ const ProductList = () => {
         </div>
     );
 
+    // Error State
     if (error) return (
         <div className="error"> 
             <b> Error <i className="fa-solid fa-circle-exclamation fa-fade" style={{color: "#fa3232"}}></i> </b> 
@@ -36,6 +38,7 @@ const ProductList = () => {
         </div>
     );
 
+    // ! State
     if (!products) return <p> Product not found. </p>;
 
     return (
@@ -53,7 +56,7 @@ const ProductList = () => {
             </div>
             {/* Product Items */}
             <div className="product-items">
-                { filteredProducts.length === 0 ? (
+                { filteredProducts.length == 0 ? (
                     <p> <i> Products not found! </i> </p>
                 ) : (
                     filteredProducts.map(product => ( <ProductItem key={product.id} product={product} /> ))

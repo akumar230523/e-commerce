@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import "../style/ACH.css";
 
-function ACH() {
+const ACH = () => {
 
     return (
         <section className="ach">

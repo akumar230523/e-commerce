@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { increaseQuantity, decreaseQuantity, removeProduct } from "../store/cartSlice";
 import { toast } from "react-toastify";
+import { increaseQuantity, decreaseQuantity, removeProduct } from "../store/cartSlice";
 
 import "../style/CartItem.css";
 

@@ -87,7 +87,7 @@
 
 /* ------------------------------------------- */
 
-.product-detail .back-button {
+.product-detail .back-btn {
     background-color: var(--db2-color);
     border-radius: 10px;
     color: white;
@@ -95,7 +95,7 @@
     padding: 5px 10px;
     transition: background-color 0.5s ease;
 }
-.product-detail .back-button:hover {
+.product-detail .back-btn:hover {
     background-color: var(--db1-color);
 }
 
@@ -115,5 +115,5 @@
     }
 }
 
-
+/* ------------------------------------------- */
 

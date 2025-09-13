@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 function useFetch(api) {
 
@@ -19,7 +19,7 @@ function useFetch(api) {
                 }
             } 
             catch (error) {
-                setError('Failed to fetch products!');
+                setError("Failed to fetch products!");
                 console.error(error);
             } 
             finally {
@@ -29,6 +29,7 @@ function useFetch(api) {
         fetchProducts();
     }, [api]);
     return { products, loading, error };
+
 }
 
 export default useFetch;

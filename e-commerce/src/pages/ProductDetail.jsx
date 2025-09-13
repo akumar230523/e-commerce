@@ -7,10 +7,25 @@ function ProductDetail() {
 
     const { id } = useParams();
 
-    const { products: product, loading, error } = useFetch(`https://dummyjson.com/products/${id}`);
+    const {products: product, loading, error} = useFetch(`https://dummyjson.com/products/${id}`);
 
-    if (loading) return <p className="loading"> Loading.. . </p>;
-    if (error) return <p className="error"> Error! <br /> {error} </p>;
+    // Loading State
+    if (loading) return (
+        <div className="loading"> 
+            <i className="fa-solid fa-spinner fa-spin-pulse"></i> 
+            <p> Loading </p> 
+        </div>
+    );
+
+    // Error State
+    if (error) return (
+        <div className="error"> 
+            <b> Error <i className="fa-solid fa-circle-exclamation fa-fade" style={{color: "#fa3232"}}></i> </b> 
+            <p> {error} </p> 
+        </div>
+    );
+
+    // ! State
     if (!product) return <p> Product not found. </p>;
 
     return (
@@ -54,10 +69,11 @@ function ProductDetail() {
                 </section>
             ) }
             {/* Back Button */}
-            <Link to='/' className="back-button"> <i className="fa-solid fa-arrow-left"></i> Back Home </Link>
+            <Link to='/' className="back-btn"> <i className="fa-solid fa-arrow-left"></i> Back Home </Link>
             {/*  */}
         </section>
     );
 }
 
 export default ProductDetail;
+

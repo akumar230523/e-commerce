@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    min-height: 100vh;
 }
 
 /* ------------------------------------------- */
@@ -45,5 +46,4 @@
     background-color: var(--db1-color);
 }
 
-
-
+/* ------------------------------------------- */

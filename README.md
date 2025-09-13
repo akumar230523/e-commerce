@@ -1,24 +1,45 @@
-# ShoppyGlobe E-commerce Application
-An e-commerce application developed using React and CSS with real-time product data from DummyJSON API. 
-This application provides comprehensive product browsing, product search and filtering, detailed product views,
-shopping cart functionality, and responsive design experience.
+# E-commerce Application
+A React-based **e-commerce app** that allows users to browse products, view details, add them to a cart, and proceed to checkout — all with a smooth and responsive UI.
 
-## 🚀 Technologies Used
-- React - Component-based UI library
-- Redux - State management for cart operations
-- React Hooks - useState, useEffect, and custom hooks
-- React Router - Client-side routing and navigation
-- CSS - Custom styling with responsive design
-- JavaScript (ES6+) - Modern JavaScript features
-- Fetch API - Data fetching from external APIs
+---
+
+## 🛠️ Technology Stack
+- **React** – Component-based UI development & routing
+- **Redux** – State management for cart and product data
+- **JavaScript** – Core language features & logic.
+- **HTML** – Semantic structure of the app.
+- **CSS** – Styling and responsive design.
+- **Fetch API** – Data fetching from API.
+
+## 🚀 Setup
+1. Clone this repository:
+   ```
+   git clone https://github.com/akumar230523/e-commerce.git
+   ```
+2. Navigate into the project folder:
+   ```
+   cd e-commerce/e-commerce
+   ```
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Run the development server:
+   ```
+   npm run dev
+   ```
+The app will be available at http://localhost:5173
 
 ## ✨ Features
-- Product Catalog - Browse and search through a comprehensive product list with real-time filtering
-- Product Details - View detailed product information with dynamic routing parameters
-- Shopping Cart - Add, remove, and modify product quantities with persistent cart state
-- Smart Search - Filter products by name or category with instant results
-- Responsive Design - Mobile-friendly interface that works across all device sizes
-- Performance Optimized - Code splitting and lazy loading for improved load times
-- Error Handling - Graceful error management for API failures and invalid routes
+- **Product Listing** – Browse products fetched from API.
+- **Product Details** – View detailed product information.
+- **Search Functionality** – Filter products by name and category.
+- **Add to Cart** – Add products with quantity management.
+- **Cart Management** – Remove or update items in the cart.
+- **Redux State Management** – Centralized cart handling.
+- **Responsive Design** – Works seamlessly on different screen sizes.
 
+## 🔗 Live Demo
+👉 [ShoppyGlobe](https://akumar230523.github.io/e-commerce/)
 
+---

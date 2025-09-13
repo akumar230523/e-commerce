@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../store/cartSlice";
 import { toast } from "react-toastify";
+import { addProduct } from "../store/cartSlice";
 
 import "../style/ProductItem.css";
 
@@ -23,7 +23,7 @@ const ProductItem = ({product}) => {
                 <p> Price: ${product.price} </p>
                 <p> {product.rating} <i className="fa-solid fa-star" style={{ color: "#FFD43B" }}></i> </p>
             </div>
-            <button className="add-button" onClick={handleAdd}> <i className="fa-solid fa-cart-shopping fa-sm"></i> Add to Cart </button>
+            <button className="add-btn" onClick={handleAdd}> <i className="fa-solid fa-cart-shopping fa-sm"></i> Add to Cart </button>
         </article>
     );
     

@@ -11,7 +11,7 @@ const Checkout = () => {
     const total = cartItems.reduce((acc, item) => acc + item.product.price * item.quantity, 0).toFixed(2);
 
     const placeOrder = () => {
-        if (cartItems.length === 0) {
+        if (cartItems.length == 0) {
             toast.warn("Your cart is empty!");
             return;
         }
@@ -43,7 +43,7 @@ const Checkout = () => {
     );
 
 }
-export default Checkout;
 
+export default Checkout;
 
 
