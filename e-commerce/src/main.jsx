@@ -2,45 +2,38 @@ import { StrictMode, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store } from './store/cartstore.js';
+import { store } from './store/store.js';
 
 import './index.css';
-
 import App from './App.jsx';
-import Home from './pages/Home.jsx';
+import NotFound from './pages/NotFound.jsx';
+import Loader from './components/Loader.jsx';
+import ProtectedRoute from './components/ProtectedRoute.jsx';
+
 const ACH = lazy(() => import('./pages/ACH.jsx'));
-const SignIn = lazy(() => import('./pages/SignIn.jsx'));
+const Home = lazy(() => import('./pages/Home.jsx'));
 const ProductList = lazy(() => import('./pages/ProductList.jsx'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail.jsx'));
 const Cart = lazy(() => import('./pages/Cart.jsx'));
 const Checkout = lazy(() => import('./pages/Checkout.jsx'));
-import NotFound from './pages/NotFound.jsx';
+const SignIn = lazy(() => import('./pages/SignIn.jsx'));
 
 const appRouter = createHashRouter([
     {
         path: '/',
         element: <App />,
         children: [
-            { index: true, element: <> <Home /> <ProductList /> </> },
-            { path: 'ach', element: <ACH /> },
-            { path: 'sign-in', element: <SignIn /> },
+            { index: true, element: (<> <Home /> <ProductList /> </>) },
             { path: 'product-list', element: <ProductList /> },
             { path: 'product-detail/:id', element: <ProductDetail /> },
             { path: 'cart', element: <Cart /> },
-            { path: 'checkout', element: <Checkout /> },
+            { path: 'checkout', element: (<ProtectedRoute> <Checkout /> </ProtectedRoute>) },
+            { path: 'sign-in', element: <SignIn /> },
+            { path: 'ach', element: <ACH /> },
         ],
         errorElement: <NotFound />,
     },
 ]);
-
-function Loader() {
-    return (
-        <div className="main-loading">
-            <i className="fa-solid fa-spinner fa-spin-pulse"></i>
-            <p> Loading  </p>
-        </div>
-    );
-}
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -51,4 +44,3 @@ createRoot(document.getElementById('root')).render(
         </Provider>
     </StrictMode>
 );
-

@@ -1,9 +1,36 @@
-@import "tailwindcss";  
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.main-loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;  
+@layer base {
+    body {
+        @apply font-sans antialiased;
+    }
+
+    /* Hide scrollbar for category container */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+    }
 }

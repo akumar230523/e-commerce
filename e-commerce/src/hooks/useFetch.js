@@ -1,35 +1,29 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-function useFetch(api) {
-
-    const [products, setProducts] = useState([]);
+function useFetch(url) {
+    const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchProducts = async () => {
+        const fetchData = async () => {
             try {
-                const response = await fetch(api);
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Network response was not ok');
                 const result = await response.json();
-                if (result.products) {
-                    setProducts(result.products);
-                } 
-                else {
-                    setProducts(result);
-                }
+                setData(result);
             } 
-            catch (error) {
-                setError("Failed to fetch products!");
-                console.error(error);
+            catch (err) {
+                setError(err.message);
             } 
             finally {
                 setLoading(false);
             }
         };
-        fetchProducts();
-    }, [api]);
-    return { products, loading, error };
+        fetchData();
+    }, [url]);
 
-}
+    return { data, loading, error };
+};
 
 export default useFetch;

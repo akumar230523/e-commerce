@@ -1,9 +1,8 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
-const Theme = createContext ({
-    isTheme: "",
-    setIsTheme: () => {},
+const ThemeContext = createContext({
+    isTheme: false,
+    setIsTheme: () => { },
 });
 
-export default Theme;
-
+export default ThemeContext;
