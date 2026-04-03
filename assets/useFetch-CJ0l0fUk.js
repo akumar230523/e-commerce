@@ -1,1 +1,0 @@
-import{r as e}from"./index-zOYCQnfg.js";function h(s){const[a,r]=e.useState(null),[o,n]=e.useState(!0),[c,u]=e.useState(null);return e.useEffect(()=>{(async()=>{try{const t=await fetch(s);if(!t.ok)throw new Error("Network response was not ok");const f=await t.json();r(f)}catch(t){u(t.message)}finally{n(!1)}})()},[s]),{data:a,loading:o,error:c}}export{h as u};
